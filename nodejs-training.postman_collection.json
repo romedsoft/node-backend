@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "0fec3253-2e18-4d2d-af3e-8cb01f672690",
+		"name": "nodejs-training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1506045"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"roman\",\r\n    \"email\":\"roman@test.com\",\r\n    \"password\":\"Temp_1234\",\r\n    \"phone\":\"9994737430\",\r\n    \"isAdmin\":true,\r\n    \"street\":\"115\",\r\n    \"apartment\":\"1200\",\r\n    \"zip\":\"97000\",\r\n    \"city\":\"merida\",\r\n    \"country\":\"mexico\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"roman@test.com\",\r\n    \"password\":\"Temp_1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc4ZWU5NjhhNTlkODQwNjRkZGUxM2MiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODU2NTQzNDAsImV4cCI6MTY4NTc0MDc0MH0.JWNl9M9C7H6tlrsum6g8E6i9ruiOP2zNwIrCeJmKGJc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"roman@test.com\",\r\n    \"password\":\"Temp_1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
